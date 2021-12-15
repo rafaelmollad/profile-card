@@ -1,0 +1,129 @@
+/***************
+ * BASE STYLES * 
+ ***************/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --white: #ffffe8;
+  --yellow: #fce837;
+  --red: #fc3737;
+  --gray: #5b5b5b;
+  --black1: #002834;
+  --black2: #000000;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Days One", sans-serif;
+  font-size: 1.6rem;
+  background: var(--yellow);
+  color: var(--white);
+}
+
+.container {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/********
+ * CARD * 
+ ********/
+.card {
+  display: flex;
+  flex-direction: column;
+  width: 47.2rem;
+  height: 70rem;
+  background: var(--black2);
+  border: 5px solid var(--white);
+  border-radius: 5px;
+}
+
+/* Card badge */
+.card__badge {
+  align-self: flex-end;
+  background: var(--yellow);
+  padding: 2px 8px;
+  margin-top: 4rem;
+  margin-right: 2rem;
+  color: var(--black1);
+  font-size: 1.5rem;
+  border-radius: 5px;
+}
+
+/* Card picture */
+.card__image {
+  width: 22.6rem;
+  height: 22.6rem;
+  background: var(--red);
+  border-radius: 50%;
+  border: 5px solid var(--white);
+  margin: 0 auto;
+  background-image: url("../images/stephen-curry.png");
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+/* Card name, card team */
+.card__name,
+.card__team {
+  text-align: center;
+}
+
+/* Card name */
+.card__name {
+  padding-top: 2rem;
+  padding-bottom: 0.2rem;
+  font-size: 3rem;
+  letter-spacing: 1px;
+}
+
+/* Card team */
+.card__team {
+  font-family: "Poppins", sans-serif;
+  font-size: 2rem;
+  font-weight: 500;
+  color: var(--gray);
+  margin-bottom: 2rem;
+  letter-spacing: 0.2px;
+}
+
+/* Card grid */
+.card__grid {
+  display: grid;
+  grid-template-rows: repeat(6, 1fr);
+  grid-template-columns: repeat(4, 1fr);
+  flex: 1;
+  background: var(--white);
+  grid-gap: 2.5px;
+}
+
+.grid__item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--black2);
+}
+
+.grid__item--2,
+.grid__item--5,
+.grid__item--8,
+.grid__item--11 {
+  grid-column: span 2;
+}
+
+.grid__item--1,
+.grid__item--2,
+.grid__item--3 {
+  border-top: 2.5px solid var(--white);
+}
